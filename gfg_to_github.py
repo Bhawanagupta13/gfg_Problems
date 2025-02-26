@@ -26,7 +26,6 @@ def push_to_github(filename):
         print("✅ Code pushed to GitHub successfully!")
     except subprocess.CalledProcessError as e:
         print(f"❌ Error: {e}")
-
 # Main execution
 if __name__ == "__main__":
     problem_name = input("Enter problem name (without spaces): ").strip()
