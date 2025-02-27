@@ -18,10 +18,10 @@ def save_gfg_solution(filename, code):
 # Function to push changes to GitHub
 def push_to_github(filename):
     try:
-        subprocess.run(["git", "add", filename], check=True)
-        commit_message = f"GFG Solution - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
+        subprocess.run(["git", "add","."], check=True)
+        commit_message = f"GFG Solution - {filename}"
         subprocess.run(["git", "commit", "-m", commit_message], check=True)
-        subprocess.run(["git", "push", "origin", "main"], check=True)
+        subprocess.run(["git", "push", "origin"], check=True)
         print("✅ Code pushed to GitHub successfully!")
     except subprocess.CalledProcessError as e:
         print(f"❌ Error: {e}")
